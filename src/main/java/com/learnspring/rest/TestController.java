@@ -32,7 +32,6 @@ public class TestController {
 	public List<Movie> getMovies(
 			@RequestParam("startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) final LocalDate startDate,
 			@RequestParam("endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) final LocalDate endDate) {
-
 		return movieService.findMovies(startDate, endDate);
 	}
 

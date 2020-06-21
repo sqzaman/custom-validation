@@ -16,14 +16,8 @@ import java.lang.annotation.Retention;
 @Retention(RUNTIME)
 @Documented
 public @interface ValidateDateRange {
-	String message() default "invalid date range";
-	
+	String message() default "invalid date range";	
 	long maxRange() default 7L;
-
     Class<?>[] groups() default {};
-
-    Class<? extends Payload>[] payload() default {};
-    
-    
-
+    Class<? extends Payload>[] payload() default {};  
 }
