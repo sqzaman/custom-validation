@@ -6,24 +6,24 @@ import org.springframework.http.HttpStatus;
 import lombok.Data;
 
 @Data
-public class ApiError {
+public class ErrorResponse {
 
     private HttpStatus status;
     private String message;
     private List<String> errors;
     
-    public ApiError() {
+    public ErrorResponse() {
         super();
     }
 
-    public ApiError(final HttpStatus status, final String message, final List<String> errors) {
+    public ErrorResponse(final HttpStatus status, final String message, final List<String> errors) {
         super();
         this.status = status;
         this.message = message;
         this.errors = errors;
     }
 
-    public ApiError(final HttpStatus status, final String message, final String error) {
+    public ErrorResponse(final HttpStatus status, final String message, final String error) {
         super();
         this.status = status;
         this.message = message;
